@@ -1,0 +1,10 @@
+---
+title: "AIU metadata"
+format: html
+---
+
+# Introduction
+Here we document assumptions, groupings, filters, ... we apply in our data analysis
+and/or visualizations.
+
+# Metadata
