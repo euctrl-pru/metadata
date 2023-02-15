@@ -1,4 +1,7 @@
 ######## R project specific (R.gitignore)
+metadata.html
+*_files/
+
 # from https://github.com/github/gitignore/
 # History files
 .Rhistory
