@@ -13,3 +13,7 @@ and/or visualizations.
 
 ## STATFOR
 See traffic zones definition in the [Regions definition document](media/eurocontrol-forecast-2020-2024-region-definition.pdf).
+
+
+## NM
+See the Agency's [Reporting Assumptions and Descriptions](https://www.eurocontrol.int/publication/reporting-assumptions-and-descriptions) page.
