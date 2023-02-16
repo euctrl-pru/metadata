@@ -15,7 +15,7 @@ Here we document assumptions, groupings, filters, ... we apply in our data analy
 
 ### Country definitions
 
-The definition of a country in this section is mostly based on the ISO definition and defined by the airports included in it. It should not be confused with other entities like FIRs, ANSPs, charging zones or traffic zones.
+The definition of a country in this section is mostly based on the ISO denomination and defined by the airports included in it. It should not be confused with other entities like FIRs, ANSPs, charging zones or traffic zones.
 
 The EUROCONTROL Airport Reference Table (\[add name\]) maps every airport to the ISO 2-letter code of the region/country it belongs to. This mapping is done at the lowest possible level (i.e. if the region has an official ISO code, this is used and not the code of the sovereign country). This allows experts across the Agency to use the grouping that suits their needs.
 
