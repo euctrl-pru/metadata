@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>AIU metadata</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="metadata_files/libs/clipboard/clipboard.min.js"></script>
+<script src="metadata_files/libs/quarto-html/quarto.js"></script>
+<script src="metadata_files/libs/quarto-html/popper.min.js"></script>
+<script src="metadata_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="metadata_files/libs/quarto-html/anchor.min.js"></script>
+<link href="metadata_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="metadata_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="metadata_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="metadata_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="metadata_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AIU metadata</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Here we document assumptions, groupings, filters, … we apply in our data analysis and/or visualizations.</p>
+</section>
+<section id="metadata" class="level1">
+<h1>Metadata</h1>
+<section id="pru" class="level2">
+<h2 class="anchored" data-anchor-id="pru">PRU</h2>
+<section id="country-definitions" class="level3">
+<h3 class="anchored" data-anchor-id="country-definitions">Country definitions</h3>
+<p>The definition of a country in this section is mostly based on the ISO definition and defined by the airports included in it. It should not be confused with other entities like FIRs, ANSPs, charging zones or traffic zones.</p>
+<p>The EUROCONTROL Airport Reference Table ([add name]) maps every airport to the ISO 2-letter code of the region/country it belongs to. This mapping is done at the lowest possible level (i.e.&nbsp;if the region has an official ISO code, this is used and not the code of the sovereign country). This allows experts across the Agency to use the grouping that suits their needs.</p>
+<p>The PRU table ([add name]) is a view on the EUROCONTROL Airport Reference Table and uses the field ‘[field name]’ to define the countries in the table below. These are the default definitions to be used in AIU products, unless there are reasons to do otherwise.</p>
+<table class="table">
+<caption>PRU country (NM area* only) definitions</caption>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 39%">
+<col style="width: 53%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Airports included</th>
+<th>Additional notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Albania</td>
+<td>All airports with ICAO code starting by ‘LA’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Armenia</td>
+<td>All airports with ICAO code starting by ‘UD’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Austria</td>
+<td>All airports with ICAO code starting by ‘LO’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Belgium</td>
+<td>All airports with ICAO code starting by ‘EB’.</td>
+<td>Note that STATFOR considers the single traffic zone ‘Belgium/Luxembourg’.</td>
+</tr>
+<tr class="odd">
+<td>Bosnia and Herzegovina</td>
+<td>All airports with ICAO code starting by ‘LQ’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Bulgaria</td>
+<td>All airports with ICAO code starting by ‘LB’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Croatia</td>
+<td>All airports with ICAO code starting by ‘LD’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Cyprus</td>
+<td>All airports with ICAO code starting by ‘LC’ except LCEN and LCRA?.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Czech Republic</td>
+<td>All airports with ICAO code starting by ‘LK’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Denmark</td>
+<td><p>All airports with ICAO code starting by ‘EK’.</p>
+<p>Note that this includes the airports in the Faroe Islands (EKVG) which are allocated to the ISO code ‘FO’ in the Airport Reference Table.</p>
+<p>Note also that Greenland is not included.</p></td>
+<td>This is a difference with respect to the Denmark STATFOR traffic zone which does not include the Faroe Islands as they are part of the oceanic Faroe Islands traffic zone.</td>
+</tr>
+<tr class="odd">
+<td>Estonia</td>
+<td>All airports with ICAO code starting by ‘EE’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Finland</td>
+<td>All airports with ICAO code starting by ‘EF’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>France</td>
+<td>All airports with ICAO code starting by ‘LF’ except Saint-Pierre (LFVP) and Miquelon (LFVM).</td>
+<td>This is a small difference with respect to the France STATFOR traffic zone, which also excludes Saint-Pierre and Miquelon but includes Monaco (LNMC) as it is too small to have its own traffic zone.</td>
+</tr>
+<tr class="even">
+<td>Georgia</td>
+<td>All airports with ICAO code starting by ‘UG’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Germany</td>
+<td>All airports with ICAO code starting by ‘ED’ or ‘ET’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Greece</td>
+<td>All airports with ICAO code starting by ‘LG’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Hungary</td>
+<td>All airports with ICAO code starting by ‘LH’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ireland</td>
+<td>All airports with ICAO code starting by ‘EI’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Israel</td>
+<td>All airports with ICAO code starting by ‘LL’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Italy</td>
+<td>All airports with ICAO code starting by ‘LI’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Kosovo*</td>
+<td><p>All airports with ICAO code starting by ‘BK’ plus airport ‘LYPR’.</p>
+<p>Note that two different ICAO codes exist in the NM systems to designate Pristina airport - BKPR and LYPR. The PRU joins both designators under a single entity.</p></td>
+<td>* This designation is without prejudice to positions on status, and is in line with UNSCR 1244/99 and the ICJ opinion on the Kosovo declaration of independence.</td>
+</tr>
+<tr class="even">
+<td>Latvia</td>
+<td>All airports with ICAO code starting by ‘EV’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Lithuania</td>
+<td>All airports with ICAO code starting by ‘EY’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Luxembourg</td>
+<td>All airports with ICAO code starting by ‘EL’.</td>
+<td>Note that STATFOR considers the single traffic zone ‘Belgium/Luxembourg’.</td>
+</tr>
+<tr class="odd">
+<td>Malta</td>
+<td>All airports with ICAO code starting by ‘LM’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Moldova</td>
+<td>All airports with ICAO code starting by ‘LU’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Montenegro</td>
+<td>All airports allocated to the <u>ISO code ‘ME’</u> in the EUROCONTROL Airport Reference Table.</td>
+<td>Note that STATFOR considers the single traffic zone ‘Serbia/Montenegro’.</td>
+</tr>
+<tr class="even">
+<td>Morocco</td>
+<td>All airports with ICAO code starting by ‘GM’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Netherlands</td>
+<td>All airports with ICAO code starting by ‘EH’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>North Macedonia</td>
+<td>All airports with ICAO code starting by ‘LW’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Norway</td>
+<td><p>All airports with ICAO code starting by ‘EN’.</p>
+<p>Note that this includes airports in Svalbard (ENGA) and Jan Mayen (ENJA) which are allocated to the ISO code ‘SJ’ in the Airport Reference Table.</p></td>
+<td>This is a difference with respect to the Norway STATFOR traffic zone which does not include the Svalbard and Jan Mayen as they are part of the Bodo Oceanic traffic zone.</td>
+</tr>
+<tr class="even">
+<td>Poland</td>
+<td>All airports with ICAO code starting by ‘EP’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Portugal</td>
+<td>All airports with ICAO code starting by ‘LP’.</td>
+<td>This is a difference with respect to the ‘Lisbon FIR’ STATFOR traffic zone which does not include airports in the Azores, Madeira, etc. [include full list] which are allocated to the ‘Santa Maria FIR’ traffic zone.</td>
+</tr>
+<tr class="even">
+<td>Romania</td>
+<td>All airports with ICAO code starting by ‘LR’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Serbia</td>
+<td>All airports allocated to the <u>ISO code ‘RS’</u> in the EUROCONTROL Airport Reference Table.</td>
+<td>Note that STATFOR considers the single traffic zone ‘Serbia/Montenegro’.</td>
+</tr>
+<tr class="even">
+<td>Slovakia</td>
+<td>All airports with ICAO code starting by ‘LZ’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Slovenia</td>
+<td>All airports with ICAO code starting by ‘LJ’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Spain</td>
+<td>All airports with ICAO code starting by ‘LE’, ‘GC’ plus Ceuta (GECE) and Melilla (GEML).</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sweden</td>
+<td>All airports with ICAO code starting by ‘ES’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Switzerland</td>
+<td>All airports with ICAO code starting by ‘LS’ excluding airports in Liechtenstein (for the time being only LSXB).</td>
+<td>This is a small difference with respect to the Switzerland STATFOR traffic zone, which includes Liechtenstein as it is too small to have its own traffic zone.</td>
+</tr>
+<tr class="odd">
+<td>Türkiye</td>
+<td>All airports with ICAO code starting by ‘LT’.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ukraine</td>
+<td>All airports with ICAO code starting by ‘UK’.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>United Kingdom</td>
+<td>All airports with ICAO code starting by ‘EG’.</td>
+<td>Note that this does not include Gibraltar airport (LXGB) but includes the Channel Island airports - Guernsey (EGJB), Isle of Man (EGNS) and Jersey (EGJJ).</td>
+</tr>
+</tbody>
+</table>
+<p>Note that the PRU also uses the designation ‘Serbia/Montenegro’ whenever the metric (e.g.&nbsp;flights including overflights) is calculated by the Network Manager as a single entity.</p>
+</section>
+</section>
+<section id="statfor" class="level2">
+<h2 class="anchored" data-anchor-id="statfor">STATFOR</h2>
+<p>See traffic zones definition in the <a href="media/eurocontrol-forecast-2020-2024-region-definition.pdf">Regions definition document</a>.</p>
+</section>
+<section id="nm" class="level2">
+<h2 class="anchored" data-anchor-id="nm">NM</h2>
+<p>See the Agency’s <a href="https://www.eurocontrol.int/publication/reporting-assumptions-and-descriptions">Reporting Assumptions and Descriptions</a> page.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
