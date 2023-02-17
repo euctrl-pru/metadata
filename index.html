@@ -72,14 +72,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="country-definitions" class="level3">
 <h3 class="anchored" data-anchor-id="country-definitions">Country definitions</h3>
 <p>The definition of a country in this section is mostly based on the ISO denomination and defined by the airports included in it. It should not be confused with other entities like FIRs, ANSPs, charging zones or traffic zones.</p>
-<p>The EUROCONTROL Airport Reference Table ([add name]) maps every airport to the ISO 2-letter code of the region/country it belongs to. This mapping is done at the lowest possible level (i.e.&nbsp;if the region has an official ISO code, this is used and not the code of the sovereign country). This allows experts across the Agency to use the grouping that suits their needs.</p>
-<p>The PRU table ([add name]) is a view on the EUROCONTROL Airport Reference Table and uses the field ‘[field name]’ to define the countries in the table below. These are the default definitions to be used in AIU products, unless there are reasons to do otherwise.</p>
+<p>The EUROCONTROL Airport Reference Table (DWH_PL.DIM_EC_ICAO_AIRPORT, managed by the Data Coordination Group via <a href="https://eurocontrol.collibra.com/asset/a2dd76c2-29ba-4a72-8790-cdc4974935fc">Collibra</a>) maps every airport to the ISO 2-letter code of the region/country it belongs to. This mapping is done at the lowest possible level (i.e.&nbsp;if the region has an official ISO code, this is used and not the code of the sovereign country). This allows experts across the Agency to use the grouping that suits their needs.</p>
+<p>The PRU airport table ([add name]) is a view on the EUROCONTROL Airport Reference Table and uses the field ‘[field name]’ to define the countries in the table below. These are the default definitions to be used in AIU products, unless there are reasons to do otherwise.</p>
+<p>The country name ([field name] in the PRU airport table is taken from the EUROCONTROL ISO Country Reference Table ([table name] also managed by the Data Coordination Group via <a href="https://eurocontrol.collibra.com/dashboard?d=adc56b9a-6665-4f90-a56b-483733a88bc7">Collibra</a>) and is in line with EUROCONTROL Legal Service’s recommendations.</p>
 <table class="table">
 <caption>PRU country (NM area* only) definitions</caption>
 <colgroup>
 <col style="width: 6%">
-<col style="width: 39%">
-<col style="width: 53%">
+<col style="width: 38%">
+<col style="width: 55%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -137,8 +138,8 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>Denmark</td>
 <td><p>All airports with ICAO code starting by ‘EK’.</p>
-<p>Note that this includes the airports in the Faroe Islands (EKVG) which are allocated to the ISO code ‘FO’ in the Airport Reference Table.</p>
-<p>Note also that Greenland is not included.</p></td>
+<p>This includes the airports in the Faroe Islands (EKVG) which are allocated to the ISO code ‘FO’ in the Airport Reference Table.</p>
+<p>Greenland is not included.</p></td>
 <td>This is a difference with respect to the Denmark STATFOR traffic zone which does not include the Faroe Islands as they are part of the oceanic Faroe Islands traffic zone.</td>
 </tr>
 <tr class="odd">
@@ -194,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>Kosovo*</td>
 <td><p>All airports with ICAO code starting by ‘BK’ plus airport ‘LYPR’.</p>
-<p>Note that two different ICAO codes exist in the NM systems to designate Pristina airport - BKPR and LYPR. The PRU joins both designators under a single entity.</p></td>
+<p>Two different ICAO codes exist in the NM systems to designate Pristina airport - BKPR and LYPR. The PRU joins both designators under a single entity.</p></td>
 <td>* This designation is without prejudice to positions on status, and is in line with UNSCR 1244/99 and the ICJ opinion on the Kosovo declaration of independence.</td>
 </tr>
 <tr class="even">
@@ -245,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>Norway</td>
 <td><p>All airports with ICAO code starting by ‘EN’.</p>
-<p>Note that this includes airports in Svalbard (ENGA) and Jan Mayen (ENJA) which are allocated to the ISO code ‘SJ’ in the Airport Reference Table.</p></td>
+<p>This includes airports in Svalbard (ENGA) and Jan Mayen (ENJA) which are allocated to the ISO code ‘SJ’ in the Airport Reference Table.</p></td>
 <td>This is a difference with respect to the Norway STATFOR traffic zone which does not include the Svalbard and Jan Mayen as they are part of the Bodo Oceanic traffic zone.</td>
 </tr>
 <tr class="even">
@@ -306,11 +307,11 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>United Kingdom</td>
 <td>All airports with ICAO code starting by ‘EG’.</td>
-<td>Note that this does not include Gibraltar airport (LXGB) but includes the Channel Island airports - Guernsey (EGJB), Isle of Man (EGNS) and Jersey (EGJJ).</td>
+<td>It does not include Gibraltar airport (LXGB) but includes the Channel Island airports - Guernsey (EGJB), Isle of Man (EGNS) and Jersey (EGJJ).</td>
 </tr>
 </tbody>
 </table>
-<p>Note that the PRU also uses the designation ‘Serbia/Montenegro’ whenever the metric (e.g.&nbsp;flights including overflights) is calculated by the Network Manager as a single entity.</p>
+<p>The PRU also uses the designation ‘Serbia/Montenegro’ whenever the metric (e.g.&nbsp;flights including overflights) is calculated by the Network Manager as a single entity.</p>
 </section>
 </section>
 <section id="statfor" class="level2">
