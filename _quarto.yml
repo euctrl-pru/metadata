@@ -1,2 +1,4 @@
 execute:
   freeze: auto
+
+theme: theme.scss
