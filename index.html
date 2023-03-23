@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,13 +73,13 @@ ul.task-list li input[type="checkbox"] {
 <p>The definition of a country in this section is mostly based on the ISO denomination and defined by the airports included in it. It should not be confused with other entities like FIRs, ANSPs, charging zones or traffic zones.</p>
 <p>The EUROCONTROL Airport Reference Table (DWH_PL.DIM_EC_ICAO_AIRPORT, managed by the Data Coordination Group via <a href="https://eurocontrol.collibra.com/asset/a2dd76c2-29ba-4a72-8790-cdc4974935fc">Collibra</a>) maps every airport to the ISO 2-letter code of the region/country it belongs to. This mapping is done at the lowest possible level (i.e.&nbsp;if the region has an official ISO code, this is used and not the code of the sovereign country). This allows experts across the Agency to use the grouping that suits their needs.</p>
 <p>The PRU airport table ([add name]) is a view on the EUROCONTROL Airport Reference Table and uses the field ‘[field name]’ to define the countries in the table below. These are the default definitions to be used in AIU products, unless there are reasons to do otherwise.</p>
-<p>The country name ([field name] in the PRU airport table is taken from the EUROCONTROL ISO Country Reference Table ([table name] also managed by the Data Coordination Group via <a href="https://eurocontrol.collibra.com/dashboard?d=adc56b9a-6665-4f90-a56b-483733a88bc7">Collibra</a>) and is in line with EUROCONTROL Legal Service’s recommendations.</p>
+<p>The country name ([field name]) in the PRU airport table is taken from the EUROCONTROL ISO Country Reference Table ([table name] also managed by the Data Coordination Group via <a href="https://eurocontrol.collibra.com/dashboard?d=adc56b9a-6665-4f90-a56b-483733a88bc7">Collibra</a>) and is in line with EUROCONTROL Legal Service’s recommendations.</p>
 <table class="table">
-<caption>PRU country (NM area* only) definitions</caption>
+<caption>PRU country definitions (NM area* only)</caption>
 <colgroup>
-<col style="width: 6%">
-<col style="width: 38%">
-<col style="width: 55%">
+<col style="width: 5%">
+<col style="width: 42%">
+<col style="width: 51%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -91,135 +91,137 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Albania</td>
-<td>All airports with ICAO code starting by ‘LA’.</td>
+<td>All airports with ICAO code starting by ‘LA’. Same set as airports allocated to ISO code ‘AL’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Armenia</td>
-<td>All airports with ICAO code starting by ‘UD’.</td>
+<td>All airports with ICAO code starting by ‘UD’. Same set as airports allocated to ISO code ‘AR’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Austria</td>
-<td>All airports with ICAO code starting by ‘LO’.</td>
+<td>All airports with ICAO code starting by ‘LO’. Same set as airports allocated to ISO code ‘AT’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Belgium</td>
-<td>All airports with ICAO code starting by ‘EB’.</td>
+<td>All airports with ICAO code starting by ‘EB’. Same set as airports allocated to ISO code ‘BE’.</td>
 <td>Note that STATFOR considers the single traffic zone ‘Belgium/Luxembourg’.</td>
 </tr>
 <tr class="odd">
 <td>Bosnia and Herzegovina</td>
-<td>All airports with ICAO code starting by ‘LQ’.</td>
+<td>All airports with ICAO code starting by ‘LQ’. Same set as airports allocated to ISO code ‘BA’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Bulgaria</td>
-<td>All airports with ICAO code starting by ‘LB’.</td>
+<td>All airports with ICAO code starting by ‘LB’. Same set as airports allocated to ISO code ‘BG’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Croatia</td>
-<td>All airports with ICAO code starting by ‘LD’.</td>
+<td>All airports with ICAO code starting by ‘LD’. Same set as airports allocated to ISO code ‘HR’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Cyprus</td>
-<td>All airports with ICAO code starting by ‘LC’ except LCEN and LCRA?.</td>
+<td>All airports with ICAO code starting by ‘LC’ except LCEN and LCRA?. Same set as airports allocated to ISO code ‘CY’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Czech Republic</td>
-<td>All airports with ICAO code starting by ‘LK’.</td>
+<td>All airports with ICAO code starting by ‘LK’. Same set as airports allocated to ISO code ‘CZ’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Denmark</td>
-<td><p>All airports with ICAO code starting by ‘EK’.</p>
-<p>This includes the airports in the Faroe Islands (EKVG) which are allocated to the ISO code ‘FO’ in the Airport Reference Table.</p>
+<td><p>All airports with ICAO code starting by ‘EK’. This includes the airports in the Faroe Islands (EKVG) which are allocated to the ISO code ‘FO’ in the Airport Reference Table.</p>
+<p>Same set as airports allocated to ISO code ‘DK+FO’.</p>
 <p>Greenland is not included.</p></td>
 <td>This is a difference with respect to the Denmark STATFOR traffic zone which does not include the Faroe Islands as they are part of the oceanic Faroe Islands traffic zone.</td>
 </tr>
 <tr class="odd">
 <td>Estonia</td>
-<td>All airports with ICAO code starting by ‘EE’.</td>
+<td>All airports with ICAO code starting by ‘EE’. Same set as airports allocated to ISO code ‘EE’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Finland</td>
-<td>All airports with ICAO code starting by ‘EF’.</td>
+<td>All airports with ICAO code starting by ‘EF’. Same set as airports allocated to ISO code ‘FI’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>France</td>
-<td>All airports with ICAO code starting by ‘LF’ except Saint-Pierre (LFVP) and Miquelon (LFVM).</td>
+<td><p>All airports with ICAO code starting by ‘LF’ except Saint-Pierre (LFVP) and Miquelon (LFVM).</p>
+<p>Same set as airports allocated to ISO code ‘FR’.</p></td>
 <td>This is a small difference with respect to the France STATFOR traffic zone, which also excludes Saint-Pierre and Miquelon but includes Monaco (LNMC) as it is too small to have its own traffic zone.</td>
 </tr>
 <tr class="even">
 <td>Georgia</td>
-<td>All airports with ICAO code starting by ‘UG’.</td>
+<td>All airports with ICAO code starting by ‘UG’. Same set as airports allocated to ISO code ‘GE’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Germany</td>
-<td>All airports with ICAO code starting by ‘ED’ or ‘ET’.</td>
+<td>All airports with ICAO code starting by ‘ED’ or ‘ET’. Same set as airports allocated to ISO code ‘DE’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Greece</td>
-<td>All airports with ICAO code starting by ‘LG’.</td>
+<td>All airports with ICAO code starting by ‘LG’. Same set as airports allocated to ISO code ‘GR’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Hungary</td>
-<td>All airports with ICAO code starting by ‘LH’.</td>
+<td>All airports with ICAO code starting by ‘LH’. Same set as airports allocated to ISO code ‘HU’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Ireland</td>
-<td>All airports with ICAO code starting by ‘EI’.</td>
+<td>All airports with ICAO code starting by ‘EI’. Same set as airports allocated to ISO code ‘IE’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Israel</td>
-<td>All airports with ICAO code starting by ‘LL’.</td>
+<td>All airports with ICAO code starting by ‘LL’. Same set as airports allocated to ISO code ‘IL’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Italy</td>
-<td>All airports with ICAO code starting by ‘LI’.</td>
+<td>All airports with ICAO code starting by ‘LI’. Same set as airports allocated to ISO code ‘IT’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Kosovo*</td>
 <td><p>All airports with ICAO code starting by ‘BK’ plus airport ‘LYPR’.</p>
-<p>Two different ICAO codes exist in the NM systems to designate Pristina airport - BKPR and LYPR. The PRU joins both designators under a single entity.</p></td>
+<p>Two different ICAO codes exist in the NM systems to designate Pristina airport - BKPR and LYPR. The PRU joins both designators under a single entity.</p>
+<p>Same set as airports allocated to ISO code ‘XK’.</p></td>
 <td>* This designation is without prejudice to positions on status, and is in line with UNSCR 1244/99 and the ICJ opinion on the Kosovo declaration of independence.</td>
 </tr>
 <tr class="even">
 <td>Latvia</td>
-<td>All airports with ICAO code starting by ‘EV’.</td>
+<td>All airports with ICAO code starting by ‘EV’. Same set as airports allocated to ISO code ‘LV’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Lithuania</td>
-<td>All airports with ICAO code starting by ‘EY’.</td>
+<td>All airports with ICAO code starting by ‘EY’. Same set as airports allocated to ISO code ‘LT’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Luxembourg</td>
-<td>All airports with ICAO code starting by ‘EL’.</td>
+<td>All airports with ICAO code starting by ‘EL’. Same set as airports allocated to ISO code ‘LU’.</td>
 <td>Note that STATFOR considers the single traffic zone ‘Belgium/Luxembourg’.</td>
 </tr>
 <tr class="odd">
 <td>Malta</td>
-<td>All airports with ICAO code starting by ‘LM’.</td>
+<td>All airports with ICAO code starting by ‘LM’. Same set as airports allocated to ISO code ‘MT’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Moldova</td>
-<td>All airports with ICAO code starting by ‘LU’.</td>
+<td>All airports with ICAO code starting by ‘LU’. Same set as airports allocated to ISO code ‘MD’.</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -229,38 +231,38 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Morocco</td>
-<td>All airports with ICAO code starting by ‘GM’.</td>
+<td>All airports with ICAO code starting by ‘GM’. Same set as airports allocated to ISO code ‘MA’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Netherlands</td>
-<td>All airports with ICAO code starting by ‘EH’.</td>
+<td>All airports with ICAO code starting by ‘EH’. Same set as airports allocated to ISO code ‘NL’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>North Macedonia</td>
-<td>All airports with ICAO code starting by ‘LW’.</td>
+<td>All airports with ICAO code starting by ‘LW’. Same set as airports allocated to ISO code ‘MK’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Norway</td>
-<td><p>All airports with ICAO code starting by ‘EN’.</p>
-<p>This includes airports in Svalbard (ENGA) and Jan Mayen (ENJA) which are allocated to the ISO code ‘SJ’ in the Airport Reference Table.</p></td>
+<td><p>All airports with ICAO code starting by ‘EN’. This includes airports in Svalbard (ENGA) and Jan Mayen (ENJA) which are allocated to the ISO code ‘SJ’ in the Airport Reference Table.</p>
+<p>Same set as airports allocated to ISO code ‘NO+SJ’.</p></td>
 <td>This is a difference with respect to the Norway STATFOR traffic zone which does not include the Svalbard and Jan Mayen as they are part of the Bodo Oceanic traffic zone.</td>
 </tr>
 <tr class="even">
 <td>Poland</td>
-<td>All airports with ICAO code starting by ‘EP’.</td>
+<td>All airports with ICAO code starting by ‘EP’. Same set as airports allocated to ISO code ‘PL’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Portugal</td>
-<td>All airports with ICAO code starting by ‘LP’.</td>
+<td>All airports with ICAO code starting by ‘LP’. Same set as airports allocated to ISO code ‘PT’.</td>
 <td>This is a difference with respect to the ‘Lisbon FIR’ STATFOR traffic zone which does not include airports in the Azores, Madeira, etc. [include full list] which are allocated to the ‘Santa Maria FIR’ traffic zone.</td>
 </tr>
 <tr class="even">
 <td>Romania</td>
-<td>All airports with ICAO code starting by ‘LR’.</td>
+<td>All airports with ICAO code starting by ‘LR’. Same set as airports allocated to ISO code ‘RO’.</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -270,42 +272,44 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Slovakia</td>
-<td>All airports with ICAO code starting by ‘LZ’.</td>
+<td>All airports with ICAO code starting by ‘LZ’. Same set as airports allocated to ISO code ‘SK’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Slovenia</td>
-<td>All airports with ICAO code starting by ‘LJ’.</td>
+<td>All airports with ICAO code starting by ‘LJ’. Same set as airports allocated to ISO code ‘SI’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Spain</td>
-<td>All airports with ICAO code starting by ‘LE’, ‘GC’ plus Ceuta (GECE) and Melilla (GEML).</td>
+<td><p>All airports with ICAO code starting by ‘LE’, ‘GC’ plus Ceuta (GECE) and Melilla (GEML).</p>
+<p>Same set as airports allocated to ISO code ‘ES’.</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Sweden</td>
-<td>All airports with ICAO code starting by ‘ES’.</td>
+<td>All airports with ICAO code starting by ‘ES’. Same set as airports allocated to ISO code ‘SE’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Switzerland</td>
-<td>All airports with ICAO code starting by ‘LS’ excluding airports in Liechtenstein (for the time being only LSXB).</td>
+<td><p>All airports with ICAO code starting by ‘LS’ excluding airports in Liechtenstein (for the time being only LSXB).</p>
+<p>Same set as airports allocated to ISO code ‘CH’.</p></td>
 <td>This is a small difference with respect to the Switzerland STATFOR traffic zone, which includes Liechtenstein as it is too small to have its own traffic zone.</td>
 </tr>
 <tr class="odd">
 <td>Türkiye</td>
-<td>All airports with ICAO code starting by ‘LT’.</td>
+<td>All airports with ICAO code starting by ‘LT’. Same set as airports allocated to ISO code ‘TR’.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Ukraine</td>
-<td>All airports with ICAO code starting by ‘UK’.</td>
+<td>All airports with ICAO code starting by ‘UK’. Same set as airports allocated to ISO code ‘UA’.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>United Kingdom</td>
-<td>All airports with ICAO code starting by ‘EG’.</td>
+<td>All airports with ICAO code starting by ‘EG’. Same set as airports allocated to ISO code ‘GB+GG+IM+JE’.</td>
 <td>It does not include Gibraltar airport (LXGB) but includes the Channel Island airports - Guernsey (EGJB), Isle of Man (EGNS) and Jersey (EGJJ).</td>
 </tr>
 </tbody>
