@@ -1,19 +1,11 @@
 ---
-title: "AIU metadata"
+title: "Country Definitions"
 format: html
 tbl-cap-location: bottom
 page-layout: full
 ---
 
-# Introduction
-
-Here we document assumptions, groupings, filters, ... we apply in our data analysis and/or visualizations.
-
-# Metadata
-
 ## PRU
-
-### Country definitions
 
 The definition of a country in this section is mostly based on the ISO denomination and defined by the airports included in it. It should not be confused with other entities like FIRs, ANSPs, charging zones or traffic zones.
 

@@ -1,4 +1,15 @@
 execute:
   freeze: auto
 
+project:
+  type: book
+
 theme: theme.scss
+
+book:
+  title: "AIU metadata"
+  author: "Performance Review Unit"
+  chapters:
+    - index.qmd
+    - metadata.qmd
+    - ao_manufacturers.qmd
