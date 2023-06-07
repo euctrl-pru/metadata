@@ -12,4 +12,5 @@ book:
   chapters:
     - index.qmd
     - metadata.qmd
+    - ao_groups.qmd
     - ao_manufacturers.qmd
