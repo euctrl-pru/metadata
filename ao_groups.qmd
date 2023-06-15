@@ -7,7 +7,7 @@ The aircraft operator groupings used in EUROCONTROL are described in the [EUROCO
 
 The EUROCONTROL table containing the aircraft operator group information (LDW_ACC.AO_GROUPS_ASSOCIATION) is managed by the Data Coordination Group. The table is however quite messy so for the AIU use, the following views have been created:
 
--   V_COVID_DIM_AO - Contains all current airline codes without duplicated lines indicating the groups 1 and 2 they belong to. ***This table is the one to be used by default as aircraft operator dimension table.***
+-   ***V_COVID_DIM_AO*** - Contains all current airline codes without duplicated lines indicating the groups 1 and 2 they belong to. ***This table is the one to be used by default as aircraft operator dimension table.***
 
 -   V_COVID_REL_AO_GROUP2 - Contains only the airline codes that belong to a group 2 and the details of the group 2.
 
