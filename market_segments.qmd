@@ -1,5 +1,5 @@
 ---
-title: "Market segments"
+title: "Market Segments"
 editor: visual
 ---
 
