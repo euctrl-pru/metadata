@@ -3,4 +3,31 @@ title: "Market segments"
 editor: visual
 ---
 
-to be added.
+Market segments are defined by STATFOR for the whole Agency and documentation explaining their rules and definitions can be found [here](https://www.eurocontrol.int/publication/market-segment-rules).
+
+Below are the relevant tables to retrieve the information:
+
+-   **SWH_DM.DM_FL_MS** - Table containing the market segment allocated to each flight. Use the flight ID field ('FLT_UID') to link to other flight tables (e.g. V_AIU_FLT, SWH_FCT.FAC_FLIGHT) and the field 'SK_FLT_TYPE_RULE_ID' to link to the table below to retrieve the name of the market segment.
+-   SWH_FCT.DIM_FLIGHT_TYPE_RULE - Dimension table containing the names of the market segments.
+-   SWH_FCT.SWH_DIM_FCT.GET_FLIGHT_TYPE_RULE_SMC - Function that, when applied to each flight, yields the market segment stored in the field 'SK_FLT_TYPE_RULE_ID' mentioned above. You can use this function, e.g. if you want data up until d-1, as the SWH_DM.DM_FL_MS contains data only up until d-2. See below example query of how to apply the function.
+
+Example query to apply the function for d-1.
+
+``` code
+SELECT  flt_uid, 
+        TRUNC (flt_a_asp_prof_time_entry) as entry_date,
+        SWH_FCT.SWH_DIM_FCT.GET_FLIGHT_TYPE_RULE_SMC (flt_LOBT,
+                  nvl(AO_ICAO_ID,'ZZZ'),
+                  flt_acft_id,flttyp,
+                  ICAO_ACFT_TY_ID,
+                  flt_dep_ad,
+                  flt_ctfm_ades,NVL(FLT_REG_MARKING,'ZZZ')) SK_FLT_TYPE_RULE_ID
+FROM v_aiu_flt a 
+WHERE flt_lobt >= trunc(sysdate) -1-1   
+AND flt_lobt< trunc(sysdate) 
+AND  (A.flt_a_asp_prof_time_entry) >=  trunc(sysdate) -1  
+AND trunc(A.flt_a_asp_prof_time_entry) < trunc(sysdate) 
+AND a.flt_state IN ('TE', 'TA', 'AA')
+```
+
+**Important note**: The market segment for each flight used to be stored in the flight table SWH_FCT.FAC_FLIGHT, however since Summer 2023 this is no longer the case and, although the field 'SK_FLT_TYPE_RULE_ID' still exists and contains information, this is no longer maintained and it should not be used.

@@ -13,5 +13,7 @@ book:
     - index.qmd
     - metadata.qmd
     - ao_groups.qmd
-    - ao_manufacturers.qmd
     - market_segments.qmd
+    - ao_manufacturers.qmd
+
+
