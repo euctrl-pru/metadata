@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AIU metadata - 5&nbsp; Market Segments</title>
+<title>AIU metadata - 3&nbsp; Flight counts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ao_manufacturers.html" rel="next">
-<link href="./ao_groups.html" rel="prev">
+<link href="./ao_groups.html" rel="next">
+<link href="./metadata.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./market_segments.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Market Segments</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./flight_counts.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Flight counts</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./flight_counts.html" class="sidebar-item-text sidebar-link">
+  <a href="./flight_counts.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Flight counts</span></span></a>
   </div>
 </li>
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./market_segments.html" class="sidebar-item-text sidebar-link active">
+  <a href="./market_segments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Market Segments</span></span></a>
   </div>
 </li>
@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Market Segments</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Flight counts</span></h1>
 </div>
 
 
@@ -163,30 +163,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Market segments are defined by STATFOR for the whole Agency and documentation explaining their rules and definitions can be found <a href="https://www.eurocontrol.int/publication/market-segment-rules">here</a>.</p>
-<p>Below are the relevant tables to retrieve the information:</p>
-<ul>
-<li><p><strong>SWH_DM.DM_FL_MS</strong> - Table containing the market segment allocated to each flight <span style="text-decoration: underline;">from 1/01/2019</span>. Use the flight ID field (‘FLT_UID’) and ‘LOBT’ field (partition key) to link to other flight tables (e.g.&nbsp;ARU_FLT.FLT, SWH_FCT.FAC_FLIGHT) and the field ‘SK_FLT_TYPE_RULE_ID’ to link to the table SWH_FCT.DIM_FLIGHT_TYPE_RULE to retrieve the name of the market segment.</p></li>
-<li><p>SWH_FCT.FAC_FLIGHT - Flight table containing all information at flight level, including market segment information for flights <span style="text-decoration: underline;">before 1/01/2019</span>.</p></li>
-<li><p>SWH_FCT.DIM_FLIGHT_TYPE_RULE - Dimension table containing the names of the market segments.</p></li>
-<li><p>SWH_FCT.SWH_DIM_FCT.GET_FLIGHT_TYPE_RULE_SMC - Function that, when applied to each flight, yields the market segment stored in the field ‘SK_FLT_TYPE_RULE_ID’ mentioned above. You can use this function, e.g.&nbsp;if you want data up until d-1, as the SWH_DM.DM_FL_MS contains data only up until d-2. See below example query of how to apply the function.</p></li>
-</ul>
-<p>Example query to apply the function for d-1.</p>
-<pre class="code"><code>SELECT  flt_uid, 
-        TRUNC (flt_a_asp_prof_time_entry) as entry_date,
-        SWH_FCT.SWH_DIM_FCT.GET_FLIGHT_TYPE_RULE_SMC (flt_LOBT,
-                  nvl(AO_ICAO_ID,'ZZZ'),
-                  flt_acft_id,flttyp,
-                  ICAO_ACFT_TY_ID,
-                  flt_dep_ad,
-                  flt_ctfm_ades,NVL(FLT_REG_MARKING,'ZZZ')) SK_FLT_TYPE_RULE_ID
-FROM aru_flt.flt a 
-WHERE flt_lobt &gt;= trunc(sysdate) -1-1   
-AND flt_lobt&lt; trunc(sysdate) 
-AND  (A.flt_a_asp_prof_time_entry) &gt;=  trunc(sysdate) -1  
-AND trunc(A.flt_a_asp_prof_time_entry) &lt; trunc(sysdate) 
-AND a.flt_state IN ('TE', 'TA', 'AA')</code></pre>
-<p><strong>Important note</strong>: The market segment for each flight used to be stored in the flight table SWH_FCT.FAC_FLIGHT, however since Summer 2023 this is no longer the case and, although the field ‘SK_FLT_TYPE_RULE_ID’ still exists and contains information for flights before 1/01/2019, for flights from this date, the market segment information in this table should not be used.</p>
+<p>Description of how the PRU counts flights in terms of date, skip in/out, etc.</p>
 
 
 
@@ -426,13 +403,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ao_groups.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Aircraft Operator Groups</span></span>
+      <a href="./metadata.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Country Definitions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ao_manufacturers.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Aircraft Manufacturers</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ao_groups.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Aircraft Operator Groups</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
