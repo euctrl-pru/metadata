@@ -12,6 +12,7 @@ book:
   chapters:
     - index.qmd
     - metadata.qmd
+    - flight_counts.qmd
     - ao_groups.qmd
     - market_segments.qmd
     - ao_manufacturers.qmd
