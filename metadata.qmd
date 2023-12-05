@@ -125,17 +125,12 @@ The country name (\[field name\]) in the PRU airport table is taken from the EUR
 
 In addition to the country definitions above, depending on the metric , in particular when presenting flights including overflights, the designations below are also used.
 
-+--------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
 | Designation        | Airports included                                                                   | Additional notes                                                                               |
-+====================+=====================================================================================+================================================================================================+
+|--------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | Belgium/Luxembourg | All airports included in the entries for Belgium and Luxembourg.                    | Typically used when presenting flights including overflights as NM calculates them together.   |
-+--------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
 | Serbia/Montenegro  | All airports included in the entries for Serbia and Montenegro.                     | Typically used when presenting flights including overflights as NM calculates them together.   |
-+--------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
 | Spain Canaries     | All airports with ICAO code starting by 'LE', plus Ceuta (GECE) and Melilla (GEML). | Typically used when presenting flights including overflights as NM calculates them separately. |
-+--------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
 | Spain Continental  | All airports with ICAO code starting by 'GC'.                                       | Typically used when presenting flights including overflights as NM calculates them separately. |
-+--------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
 
 : PRU additional traffic zone definitions
 
