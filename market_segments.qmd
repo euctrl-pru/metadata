@@ -1,15 +1,15 @@
 ---
 title: "Market Segments"
-editor: visual
+editor: source
 ---
 
 Market segments are defined by STATFOR for the whole Agency and documentation explaining their rules and definitions can be found [here](https://www.eurocontrol.int/publication/market-segment-rules).
 
 Below are the relevant tables to retrieve the information:
 
--   **SWH_DM.DM_FL_MS** - Table containing the market segment allocated to each flight. Use the flight ID field ('FLT_UID') and 'LOBT' field (partition key) to link to other flight tables (e.g. ARU_FLT.FLT, SWH_FCT.FAC_FLIGHT) and the field 'SK_FLT_TYPE_RULE_ID' to link to the table SWH_FCT.DIM_FLIGHT_TYPE_RULE to retrieve the name of the market segment.
+-   **SWH_DM.DM_FL_MS** - Table containing the market segment allocated to each flight **as of 1/1/2019**. Use the flight ID field ('FLT_UID') and 'LOBT' field (partition key) to link to other flight tables and the field 'SK_FLT_TYPE_RULE_ID' to link to the table SWH_FCT.DIM_FLIGHT_TYPE_RULE to retrieve the name of the market segment.
 
--   SWH_FCT.FAC_FLIGHT - Flight table containing all information at flight level, including market segment information for flights.
+-   SWH_FCT.FAC_FLIGHT - Flight table containing all information at flight level, including market segment information for flights **up until 31/12/2018**. **IMPORTANT!** Note that the the field defining the market segment (SK_FLT_TYPE_RULE_ID) is still filled in in the table for dates after 31/12/2018, but the information is not correct and should not be used.
 
 -   SWH_FCT.DIM_FLIGHT_TYPE_RULE - Dimension table containing the names of the market segments.
 
@@ -34,4 +34,4 @@ AND trunc(A.flt_a_asp_prof_time_entry) < trunc(sysdate)
 AND a.flt_state IN ('TE', 'TA', 'AA')
 ```
 
-**Important note**: The market segment for each flight used to be stored in the flight table SWH_FCT.FAC_FLIGHT, however this is not maintained anymore and will soon be hardcoded to -1. Do not use it.
+
