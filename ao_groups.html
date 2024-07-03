@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The aircraft operator groupings used in EUROCONTROL are described in the <a href="https://www.eurocontrol.int/directory/airline-groups-lookup">EUROCONTROL Airline groups lookup</a> page.</p>
 <p>The EUROCONTROL table containing the aircraft operator group information (<code>LDW_ACC.AO_GROUPS_ASSOCIATION</code>) is managed by the Data Coordination Group. The table is however quite messy so for the AIU use, the following views have been created:</p>
 <ul>
-<li><p><strong><em>V_COVID_DIM_AO</em></strong> - Contains all current airline codes without duplicated lines indicating the groups 1 and 2 they belong to. <strong><em>This table is the one to be used by default as aircraft operator dimension table</em></strong> for most of the AIU products however, the ‘official’ dimension table for aircraft operators used e.g.&nbsp;in the FAC_FLIGHT table is <code>SWH_DM.DIM_OPERATOR</code>. Eventually this two tables should converge.</p></li>
+<li><p><strong><em>V_COVID_DIM_AO</em></strong> - Contains all current airline codes without duplicated lines indicating the groups 1 and 2 they belong to. <strong><em>This table is the one used by default as aircraft operator dimension table</em></strong> for most of the AIU products however, the ‘official’ EUROCONTROL dimension table for aircraft operators used in e.g.&nbsp;the FAC_FLIGHT table, is <code>SWH_DM.DIM_OPERATOR</code>. Eventually this two tables should converge.</p></li>
 <li><p>V_COVID_REL_AO_GROUP2 - Contains only the airline codes that belong to a group 2 and the details of the group 2.</p></li>
 <li><p>V_COVID_REL_AO_ASSOC - Contains only the airline codes that belong to an association and the details of the association.</p></li>
 </ul>
