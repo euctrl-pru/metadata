@@ -11,7 +11,7 @@ book:
   author: "Performance Review Unit"
   chapters:
     - index.qmd
-    - metadata.qmd
+    - countries.qmd
     - flight_counts.qmd
     - ao_groups.qmd
     - market_segments.qmd
